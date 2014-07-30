@@ -21,9 +21,6 @@ var last: T? { get }
   Adds a managed object to a relationship of the current managed object. 
   This method adds the managed object to the set of managed objects in the 
   relationship while maintaining KVO-compliance.
-	
-  :param: value The managed object to add to the relationship.
-  :param: relationshipName The name of the relationship.
 */
 func addRelationshipObject(value: NSManagedObject, relationshipName: String) -> Void
 ```
@@ -32,11 +29,52 @@ func addRelationshipObject(value: NSManagedObject, relationshipName: String) -> 
 /**
 	Returns a new managed object with the given entity name in the given 
 	managed object context.
-	
-	:param: entityName The name of the entity to create.
-	:param: context The context in which to create the entity.
-	
-	:returns: A new managed object context inserted in the given context.
 */
 class func createWithTypeInContext(entityName: String, context: NSManagedObjectContext) -> AnyObject
+```
+
+## NSManagedOjbectContext
+
+```swift
+/**
+	Returns the counted number of results for the given fetch request. 
+	Returns 0 if the request fails.
+*/
+func resultsCountForRequest(fetchRequest: NSFetchRequest) -> Int 
+```
+
+```swift
+/**
+	Returns all the results for the given fetch request. 
+	Returns an empty array if the request fails.
+*/
+func resultsForRequest(fetchRequest: NSFetchRequest) -> [AnyObject] 
+```
+
+```swift
+/**
+	Returns a single result for the given fetch request. 
+	Returns nil if the request fails.
+*/
+func resultForRequest(fetchRequest: NSFetchRequest) -> AnyObject?
+```
+
+```swift
+/**
+	Returns the given object from the current context from it's managed object ID.
+*/
+func getObject(managedObject: NSManagedObject) -> AnyObject
+```
+
+## NSFetchRequest
+
+```swift
+/**
+	Returns a fetch request with a given entity name configured with the 
+	optional parameters given.
+*/
+class func createFetchRequest(entityName: String, 
+	predicate: NSPredicate? = nil, 
+	sortDescriptor: NSSortDescriptor? = nil, 
+	limit: Int = 0) -> NSFetchRequest
 ```
