@@ -1,6 +1,6 @@
 # SwiftyExtensions
 
-Somewhat useful extensions written in Swift
+Somewhat useful extensions written in Swift. Mostly unrelated to the swift language. They have valid swift documentation too, which is kinda cool.
 
 ## Array
 
