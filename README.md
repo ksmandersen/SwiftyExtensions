@@ -14,6 +14,28 @@ var first: T? { get }
 var last: T? { get }
 ```
 
+## Int
+
+```swift
+/// Returns true for even numbers and false for non-even
+var isEven: Bool { get }
+```
+
+```swift
+/// Returns true for odd numbers and false for non-odd
+var isOdd: Bool { get }
+```
+
+```swift
+/// Returns true for positive numbers (>= 0). Otherwise false
+var isPositive: Bool { get }
+```
+
+```swift
+/// Returns true for negative numbers (<0). Otherwise false
+var isNegative: Bool { get }
+```
+
 ## NSManagedObject
 
 ```swift
