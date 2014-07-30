@@ -2,7 +2,17 @@
 
 Somewhat useful extensions written in Swift. Mostly unrelated to the swift language. They have valid swift documentation too, which is kinda cool.
 
-## Array
+- [Swift](#swift)
+	- [Array](#array)
+	- [Int](#int)
+- [Core Data](#core-data)
+	- [NSManagedObject](#nmanagedobject)
+	- [NSManagedObjectContext](#nsmanagedobjectcontext)
+	- [NSFetchRequest](#nsfetchrequest)
+
+## Swift
+
+### [Array](Swift/Array+Extensions.swift)
 
 ```swift
 /// The first element in the array or nil if empty
@@ -14,7 +24,7 @@ var first: T? { get }
 var last: T? { get }
 ```
 
-## Int
+### [Int](Swift/Int+Extensions.swift)
 
 ```swift
 /// Returns true for even numbers and false for non-even
@@ -36,7 +46,9 @@ var isPositive: Bool { get }
 var isNegative: Bool { get }
 ```
 
-## NSManagedObject
+## Core Data
+
+### [NSManagedObject](CoreData/NSManagedObject+Extensions.swift)
 
 ```swift
 /**
@@ -55,7 +67,7 @@ func addRelationshipObject(value: NSManagedObject, relationshipName: String) -> 
 class func createWithTypeInContext(entityName: String, context: NSManagedObjectContext) -> AnyObject
 ```
 
-## NSManagedOjbectContext
+### [NSManagedOjbectContext](CoreData/NSManagedObjectContext+Extensions.swift)
 
 ```swift
 /**
@@ -88,7 +100,7 @@ func resultForRequest(fetchRequest: NSFetchRequest) -> AnyObject?
 func getObject(managedObject: NSManagedObject) -> AnyObject
 ```
 
-## NSFetchRequest
+### [NSFetchRequest](CoreData/NSFetchRequest+Extensions.swift)
 
 ```swift
 /**
